@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sun Yutong — Wealth management, investment advisory, roadshow & training. Interactive one-page resume.">
+<title>Sun Yutong — Resume</title>
+<link rel="preconnect" href="https://miaoda.feishu.cn" crossorigin>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+/* ============ tokens ============ */
+:root{
+  --ink:#0B1424;
+  --ink2:#0F1B31;
+  --ink3:#15243E;
+  --gold:#C9A86A;
+  --gold2:#E3C991;
+  --gold-dim:rgba(201,168,106,.30);
+  --ivory:#F2EDE0;
+  --paper:#FAF6EB;
+  --paper2:#EFE7D2;
+  --navy:#23314B;
+  --muted:rgba(242,237,224,.58);
+  --muted2:rgba(242,237,224,.34);
+  --serif:'Noto Serif SC', 'Songti SC', 'SimSun', Georgia, serif;
+  --sans:'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--ink);
+  color:var(--ivory);
+  -webkit-font-smoothing:antialiased;
+  font-size:15px;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer;}
+a{color:inherit;text-decoration:none;}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:2px;border-radius:4px;}
+::selection{background:rgba(201,168,106,.35);}
+img{max-width:100%;display:block;}
+
+/* ============ grain ============ */
+.grain{
+  position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============ nav ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:80;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 26px;
+  background:rgba(11,20,36,.78);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(201,168,106,.16);
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.b-mono{
+  width:36px;height:36px;border-radius:50%;flex:none;
+  border:1px solid rgba(227,201,145,.7);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-weight:700;font-size:13px;color:var(--gold2);
+}
+.b-name{font-family:var(--serif);font-weight:700;font-size:13.5px;letter-spacing:.08em;line-height:1.1;}
+.b-name small{display:block;font-family:var(--sans);font-size:9.5px;font-weight:500;letter-spacing:.18em;color:var(--muted);}
+.nav-links{display:flex;align-items:center;gap:4px;}
+.nav-links a{
+  font-size:12.5px;font-weight:500;color:var(--muted);letter-spacing:.04em;
+  padding:7px 13px;border-radius:999px;transition:color .25s, background .25s;
+}
+.nav-links a:hover{color:var(--gold2);}
+.nav-links a.on{color:var(--gold2);background:rgba(201,168,106,.13);}
+.nav-cta{
+  font-size:12.5px;font-weight:600;color:var(--ink);
+  background:var(--gold2);padding:8px 16px;border-radius:999px;
+  transition:background .25s, transform .2s var(--ease);
+}
+.nav-cta:hover{background:var(--ivory);}
+.nav-cta:active{transform:scale(.96);}
+#btnMenu{display:none;}
+
+/* ============ hero ============ */
+.hero{
+  position:relative;
+  min-height:92vh;
+  display:flex;align-items:center;
+  padding:130px 26px 90px;
+  overflow:hidden;
+  background:
+    radial-gradient(760px 480px at 78% 16%, rgba(201,168,106,.14), transparent 68%),
+    radial-gradient(620px 420px at 10% 96%, rgba(21,36,62,.9), transparent 72%),
+    linear-gradient(160deg,#0E1A2E 0%,#0B1424 70%);
+  border-bottom:1px solid rgba(201,168,106,.16);
+}
+.hero-inner{width:100%;max-width:1080px;margin:0 auto;}
+.eyebrow{
+  font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold2);display:flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--gold2);opacity:.75;}
+.hero-name{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(54px,8vw,96px);line-height:1.02;letter-spacing:.02em;
+  margin-top:20px;
+}
+.hero-name em{font-style:normal;color:var(--gold2);}
+.hero-rule{width:72px;height:2px;background:linear-gradient(90deg,var(--gold2),transparent);margin:26px 0 20px;}
+.hero-role{font-size:clamp(16px,1.8vw,20px);font-weight:500;}
+.hero-role span{color:var(--muted);font-weight:300;}
+.hero-meta{font-size:13px;color:var(--muted);letter-spacing:.07em;margin-top:8px;}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;
+  max-width:640px;margin-top:42px;
+}
+.h-stat{border-left:2px solid rgba(227,201,145,.5);padding-left:16px;}
+.h-stat b{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(24px,2.6vw,34px);color:var(--gold2);line-height:1.1;}
+.h-stat span{font-size:12px;color:var(--muted);letter-spacing:.05em;}
+.hero-actions{display:flex;gap:12px;margin-top:44px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  height:46px;padding:0 24px;border-radius:999px;
+  font-size:13.5px;font-weight:600;letter-spacing:.03em;
+  transition:background .25s, border-color .25s, transform .2s var(--ease), color .25s;
+}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;}
+.btn-solid{background:var(--gold2);color:var(--ink);}
+.btn-solid:hover{background:var(--ivory);}
+.btn-ghost{border:1px solid rgba(227,201,145,.45);color:var(--ivory);}
+.btn-ghost:hover{background:rgba(201,168,106,.16);border-color:var(--gold2);}
+.btn:active{transform:scale(.97);}
+.hero-deco{
+  position:absolute;right:4%;top:50%;transform:translateY(-50%);
+  font-family:var(--serif);font-weight:900;font-size:clamp(180px,24vw,340px);
+  line-height:1;color:rgba(242,237,224,.028);letter-spacing:.06em;
+  pointer-events:none;user-select:none;white-space:nowrap;
+}
+
+/* ============ sections ============ */
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px;}
+section.block{padding:88px 0 20px;}
+.sec-head{margin-bottom:38px;}
+.sec-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3vw,36px);margin-top:10px;letter-spacing:.01em;}
+.sec-head p{font-size:14px;color:var(--muted);margin-top:6px;max-width:640px;}
+.sec-num{
+  font-family:var(--serif);font-size:13px;color:var(--gold);
+  letter-spacing:.2em;display:flex;align-items:center;gap:10px;
+}
+.sec-num::after{content:"";height:1px;width:44px;background:rgba(201,168,106,.5);}
+
+/* ============ about tiles ============ */
+.about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.tile{
+  border:1px solid rgba(201,168,106,.4);background:rgba(255,255,255,.04);
+  border-radius:18px;padding:24px 26px;
+  transition:background .3s, border-color .3s, transform .3s var(--ease);
+}
+.tile:hover{background:rgba(201,168,106,.08);border-color:var(--gold2);transform:translateY(-3px);}
+.tile h3{display:flex;align-items:center;gap:10px;font-size:15.5px;font-weight:700;margin-bottom:8px;}
+.tile h3 svg{width:18px;height:18px;stroke:var(--gold2);fill:none;stroke-width:1.8;flex:none;}
+.tile p{font-size:13.5px;color:var(--muted);line-height:1.7;}
+.tile .t-en{font-size:11px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;font-weight:700;}
+
+/* ============ education ============ */
+.edu-card{
+  background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+  border:1px solid rgba(201,168,106,.3);border-radius:20px;padding:30px 32px;
+}
+.edu-list{display:flex;flex-direction:column;}
+.edu-row{display:grid;grid-template-columns:128px 34px 1fr;align-items:start;}
+.edu-row+.edu-row{margin-top:18px;}
+.edu-year{font-family:var(--serif);font-weight:700;font-size:15.5px;color:var(--gold2);padding-top:3px;line-height:1.4;}
+.edu-axis{display:flex;flex-direction:column;align-items:center;height:100%;}
+.edu-dot{width:12px;height:12px;border-radius:50%;background:var(--ink);border:2.5px solid var(--gold2);margin-top:6px;flex:none;}
+.edu-line{width:2px;flex:1;background:linear-gradient(180deg,rgba(227,201,145,.55),rgba(227,201,145,.12));margin-top:3px;}
+.edu-row:last-child .edu-line{opacity:0;}
+.edu-body h4{font-size:16.5px;font-weight:700;line-height:1.45;}
+.edu-body p{font-size:13px;color:var(--muted);}
+.badge{
+  display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--ink);
+  background:var(--gold2);padding:2px 10px;border-radius:999px;margin-left:8px;vertical-align:2px;
+}
+
+/* ============ experience ============ */
+.xp{position:relative;display:grid;grid-template-columns:150px 34px 1fr;gap:0;align-items:start;}
+.xp-col-axis{position:relative;height:100%;}
+.xp-dot{
+  position:absolute;top:8px;left:50%;transform:translateX(-50%);
+  width:14px;height:14px;border-radius:50%;
+  background:var(--ink);border:3px solid var(--gold2);z-index:2;
+  box-shadow:0 0 0 4px rgba(201,168,106,.14);
+}
+.xp-line{
+  position:absolute;top:16px;bottom:-6px;left:50%;width:2px;transform:translateX(-50%);
+  background:linear-gradient(180deg,rgba(227,201,145,.5),rgba(227,201,145,.1));
+}
+.xp:last-child .xp-line{display:none;}
+.xp-year{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--gold2);padding-top:5px;line-height:1.5;}
+.xp-card{
+  background:var(--paper);color:var(--navy);
+  border-radius:18px;padding:24px 26px;margin:0 0 20px 4px;
+  box-shadow:0 20px 46px rgba(2,8,20,.5);
+  border:1px solid rgba(201,168,106,.28);
+}
+.xp-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;border-bottom:1px solid rgba(201,168,106,.4);padding-bottom:12px;}
+.xp-head h3{font-family:var(--serif);font-weight:700;font-size:19px;line-height:1.3;}
+.xp-head .co{font-size:13px;color:rgba(35,49,75,.62);font-weight:500;margin-top:3px;}
+.period{
+  flex:none;font-size:11.5px;font-weight:700;letter-spacing:.05em;color:var(--gold);
+  border:1px solid rgba(201,168,106,.6);background:rgba(201,168,106,.12);
+  padding:4px 12px;border-radius:999px;white-space:nowrap;
+}
+.xp-body{margin-top:13px;display:flex;flex-direction:column;gap:9px;}
+.xp-body li{list-style:none;display:flex;gap:10px;font-size:13.5px;line-height:1.65;color:rgba(35,49,75,.84);}
+.xp-body li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:8px;}
+.xp-metric{
+  display:flex;align-items:center;gap:10px;margin-top:14px;
+  font-size:13px;font-weight:700;color:var(--navy);
+  border-top:1px dashed rgba(201,168,106,.5);padding-top:11px;
+}
+.xp-metric svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.8;flex:none;}
+
+/* ============ skills ============ */
+.sk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.cred{
+  border:1px solid rgba(201,168,106,.4);background:rgba(255,255,255,.04);
+  border-radius:18px;padding:24px 26px;
+}
+.cred .c-ic{width:40px;height:40px;border-radius:12px;background:rgba(201,168,106,.16);display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+.cred .c-ic svg{width:20px;height:20px;stroke:var(--gold2);fill:none;stroke-width:1.8;}
+.cred h4{font-size:15.5px;font-weight:700;}
+.cred p{font-size:12.5px;color:var(--muted);margin-top:3px;}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12.5px;font-weight:500;color:var(--ivory);
+  border:1px solid rgba(201,168,106,.45);background:rgba(201,168,106,.09);
+  padding:5px 14px;border-radius:999px;white-space:nowrap;
+  transition:background .25s, border-color .25s, transform .2s var(--ease);
+}
+.chip:hover{background:rgba(201,168,106,.2);border-color:var(--gold2);transform:translateY(-2px);}
+.chip svg{width:13px;height:13px;stroke:var(--gold2);fill:none;stroke-width:1.8;}
+
+/* ============ contact ============ */
+.contact-card{
+  background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+  border:1px solid rgba(201,168,106,.3);border-radius:20px;
+  padding:36px 38px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.c-row{
+  display:flex;align-items:center;gap:14px;padding:16px;
+  border:1px solid rgba(201,168,106,.4);border-radius:16px;
+  background:rgba(255,255,255,.03);
+  transition:background .3s, border-color .3s, transform .3s var(--ease);
+}
+a.c-row:hover{background:rgba(201,168,106,.12);border-color:var(--gold2);transform:translateY(-3px);}
+.c-ic{width:40px;height:40px;flex:none;border-radius:50%;background:rgba(201,168,106,.16);display:flex;align-items:center;justify-content:center;}
+.c-ic svg{width:18px;height:18px;stroke:var(--gold2);fill:none;stroke-width:1.8;}
+.c-lab{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+.c-val{font-size:15px;font-weight:600;color:var(--ivory);word-break:break-all;}
+.contact-note{max-width:640px;font-size:13.5px;color:var(--muted);margin-top:26px;}
+
+/* ============ footer ============ */
+footer.site{
+  margin-top:80px;padding:34px 26px 40px;
+  border-top:1px solid rgba(201,168,106,.16);
+  text-align:center;font-size:12px;color:var(--muted2);letter-spacing:.05em;
+}
+footer.site b{color:var(--gold);font-weight:600;}
+
+/* ============ reveal ============ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease), transform .7s var(--ease);}
+.reveal.in{opacity:1;transform:none;}
+
+/* ============ responsive ============ */
+@media (max-width:900px){
+  .nav-links{display:none;}
+  #btnMenu{
+    display:inline-flex;width:38px;height:38px;border-radius:50%;
+    border:1px solid rgba(227,201,145,.4);align-items:center;justify-content:center;
+  }
+  #btnMenu svg{width:17px;height:17px;stroke:var(--ivory);fill:none;stroke-width:2;}
+  .drawer{
+    position:fixed;inset:0;z-index:100;display:none;
+    background:rgba(7,13,24,.94);backdrop-filter:blur(12px);
+    flex-direction:column;padding:26px;
+  }
+  .drawer.open{display:flex;}
+  .drawer a{
+    font-family:var(--serif);font-size:20px;color:var(--ivory);
+    padding:14px 6px;border-bottom:1px solid rgba(201,168,106,.15);
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .drawer a i{font-style:normal;font-size:12px;color:var(--gold);letter-spacing:.15em;}
+  .drawer-close{align-self:flex-end;margin-bottom:14px;color:var(--gold2);font-size:13px;letter-spacing:.1em;}
+  .xp{grid-template-columns:96px 28px 1fr;}
+  .contact-card{grid-template-columns:1fr;}
+  .about-grid,.sk-grid{grid-template-columns:1fr;}
+}
+@media (max-width:560px){
+  .hero{padding:132px 20px 64px;min-height:0;}
+  .hero-stats{grid-template-columns:1fr;gap:12px;max-width:none;}
+  .xp{grid-template-columns:1fr;gap:6px;}
+  .xp-col-axis{display:none;}
+  .xp-year{padding:2px 0 0;}
+  .edu-row{grid-template-columns:1fr;}
+  .edu-axis{display:none;}
+  .edu-row+.edu-row{margin-top:20px;}
+  .edu-year{margin-bottom:4px;}
+  .xp-card{margin-left:0;}
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ nav ============ -->
+<header class="nav">
+  <div class="brand">
+    <span class="b-mono">SY</span>
+    <span class="b-name">SUN YUTONG<small>RESUME</small></span>
+  </div>
+  <nav class="nav-links" id="navLinks" aria-label="Sections">
+    <a href="#about" data-nav="about">About</a>
+    <a href="#education" data-nav="education">Education</a>
+    <a href="#experience" data-nav="experience">Experience</a>
+    <a href="#skills" data-nav="skills">Skills</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <a class="nav-cta" href="#contact">Hire Me</a>
+    <button id="btnMenu" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<!-- ============ hero ============ -->
+<section class="hero">
+  <div class="hero-deco" aria-hidden="true">SUN YUTONG</div>
+  <div class="hero-inner">
+    <p class="eyebrow">Wealth Management · Investment Advisory</p>
+    <h1 class="hero-name">SUN <em>YUTONG</em></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-role">Roadshow &amp; Training · Client Relationship · Asset Allocation<br><span>Private banking, wealth products and capital markets</span></p>
+    <p class="hero-meta">Beijing · Hong Kong &nbsp;—&nbsp; 2004 → 2026</p>
+    <div class="hero-stats">
+      <div class="h-stat"><b>20+</b><span>Years of Experience</span></div>
+      <div class="h-stat"><b>¥2B+</b><span>Capital Raised</span></div>
+      <div class="h-stat"><b>200+</b><span>Sales Team Guided</span></div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#contact"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Contact Me</a>
+      <a class="btn btn-ghost" href="#experience"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View Experience</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ about ============ -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2>Career Snapshot</h2>
+      <p>Two decades of wealth management, investment advisory and client relationship building — from field sales to investment consulting leadership.</p>
+    </div>
+    <div class="about-grid">
+      <div class="tile reveal">
+        <h3><svg viewBox="0 0 24 24"><path d="M3 7h18v12H3z" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg>Deep Wealth Roots</h3>
+        <p>Years of experience, contacts and clients accumulated in China&rsquo;s wealth management industry.</p>
+      </div>
+      <div class="tile reveal">
+        <h3><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.4-7-11a7 7 0 0 1 14 0c0 5.6-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Client Insight</h3>
+        <p>Seriously understands the internal needs of Chinese high-net-worth clients.</p>
+      </div>
+      <div class="tile reveal">
+        <h3><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg>Multi-Market Expertise</h3>
+        <p>Familiar with China&rsquo;s primary, secondary and fixed-income markets; fluent in HK and US equities.</p>
+      </div>
+      <div class="tile reveal">
+        <h3><svg viewBox="0 0 24 24"><path d="M3 11l14-6v14L3 13z"/><path d="M7 13v4a2 2 0 0 0 4 1"/></svg>Roadshow &amp; Training</h3>
+        <p>Outstanding roadshow and training ability with solid macro and financial-markets knowledge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ education ============ -->
+<section class="block" id="education">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <h2>Education</h2>
+      <p>Three degrees across arts-tech, business and economics.</p>
+    </div>
+    <div class="edu-card reveal">
+      <div class="edu-list">
+        <div class="edu-row">
+          <div class="edu-year">2026 —<br>Present</div>
+          <div class="edu-axis"><span class="edu-dot"></span><span class="edu-line"></span></div>
+          <div class="edu-body"><h4>MSc in Arts Technology and Business<span class="badge">In Progress</span></h4><p>Lingnan University</p></div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-year">2008 —<br>2011</div>
+          <div class="edu-axis"><span class="edu-dot"></span><span class="edu-line"></span></div>
+          <div class="edu-body"><h4>MBA</h4><p>Peking University · Guanghua School of Management</p></div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-year">2000 —<br>2004</div>
+          <div class="edu-axis"><span class="edu-dot"></span><span class="edu-line"></span></div>
+          <div class="edu-body"><h4>BA in Economics</h4><p>University of Colorado · International College at Beijing</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ experience ============ -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <h2>Professional Experience</h2>
+      <p>2004 — 2026 · from field sales and education entrepreneurship to investment consulting leadership.</p>
+    </div>
+
+    <div class="xp reveal">
+      <div class="xp-year">2021 — 2026</div>
+      <div class="xp-col-axis"><span class="xp-dot"></span><span class="xp-line"></span></div>
+      <div class="xp-card">
+        <div class="xp-head">
+          <div><h3>Director of Investment Consultant Department</h3><p class="co">Beijing Polysoar Investment Co., Ltd.</p></div>
+          <span class="period">2021 — 2026</span>
+        </div>
+        <ul class="xp-body">
+          <li>Delivered professional equity-investment advice to high-value individual and corporate clients.</li>
+          <li>Lectured on live webcasts and the company&rsquo;s large roadshows.</li>
+          <li>Devised sales strategy and refined product selling points for a 200+ sales team.</li>
+          <li>Helped the company raise <b>≈¥2 billion</b> cumulatively; led investor relations management.</li>
+        </ul>
+        <p class="xp-metric"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>≈¥2B raised · 200+ sales team · Investor relations</p>
+      </div>
+    </div>
+
+    <div class="xp reveal">
+      <div class="xp-year">2019 — 2021</div>
+      <div class="xp-col-axis"><span class="xp-dot"></span><span class="xp-line"></span></div>
+      <div class="xp-card">
+        <div class="xp-head">
+          <div><h3>Independent Investment Consultant</h3><p class="co">Private-banking advisory for major commercial banks</p></div>
+          <span class="period">2019 — 2021</span>
+        </div>
+        <ul class="xp-body">
+          <li>External consultant to the private banking departments of large commercial banks — <b>Bank of Communications, China Minsheng Bank</b> and others.</li>
+          <li>Delivered professional advice to high-value clients and gave product briefings at roadshows and salons.</li>
+        </ul>
+        <p class="xp-metric"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z"/></svg>External advisory · Product briefings &amp; salons</p>
+      </div>
+    </div>
+
+    <div class="xp reveal">
+      <div class="xp-year">2018 — 2019</div>
+      <div class="xp-col-axis"><span class="xp-dot"></span><span class="xp-line"></span></div>
+      <div class="xp-card">
+        <div class="xp-head">
+          <div><h3>Director of Investment Consulting</h3><p class="co">Northern Region of China · Jupai Investment Group</p></div>
+          <span class="period">2018 — 2019</span>
+        </div>
+        <ul class="xp-body">
+          <li>Advised on asset allocation and built deep relationships with high-value clients across the region.</li>
+          <li>Lectured on Chinese macroeconomics and asset allocation at regional roadshows.</li>
+          <li>Devised sales strategies and ran product training for a 100+ sales team.</li>
+        </ul>
+        <p class="xp-metric"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>100+ regional sales team · Macro &amp; asset-allocation training</p>
+      </div>
+    </div>
+
+    <div class="xp reveal">
+      <div class="xp-year">2012 — 2017</div>
+      <div class="xp-col-axis"><span class="xp-dot"></span><span class="xp-line"></span></div>
+      <div class="xp-card">
+        <div class="xp-head">
+          <div><h3>Co-Founder</h3><p class="co">Longbamboo Education Management Co., Ltd.</p></div>
+          <span class="period">2012 — 2017</span>
+        </div>
+        <ul class="xp-body">
+          <li>Led sales and taught flagship courses — MBA entrance exam preparation and interview coaching.</li>
+          <li>Taught GMAT <b>Sentence Correction &amp; Math</b>, and TOEFL <b>Reading &amp; Writing</b>.</li>
+        </ul>
+        <p class="xp-metric"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v4c0 1.7 2.7 3 6 3s6-1.3 6-3v-4"/></svg>Entrepreneurship · MBA / GMAT / TOEFL instruction</p>
+      </div>
+    </div>
+
+    <div class="xp reveal">
+      <div class="xp-year">2008 — 2011</div>
+      <div class="xp-col-axis"><span class="xp-dot"></span><span class="xp-line"></span></div>
+      <div class="xp-card">
+        <div class="xp-head">
+          <div><h3>Senior Client Officer</h3><p class="co">PFS Dept. · HSBC Beijing Branch</p></div>
+          <span class="period">2008 — 2011</span>
+        </div>
+        <ul class="xp-body">
+          <li>Developed new clients and sold a full range of banking products and services.</li>
+          <li>Designed strategies helping clients achieve short- and long-term investment and insurance objectives.</li>
+        </ul>
+        <p class="xp-metric"><svg viewBox="0 0 24 24"><path d="M3 21h18M6 17V9M12 17V5M18 17v-6"/></svg>Premier private banking · Wealth &amp; insurance planning</p>
+      </div>
+    </div>
+
+    <div class="xp reveal">
+      <div class="xp-year">2004 — 2007</div>
+      <div class="xp-col-axis"><span class="xp-dot"></span><span class="xp-line"></span></div>
+      <div class="xp-card">
+        <div class="xp-head">
+          <div><h3>Account Manager</h3><p class="co">Field Sales Dept. · DHL-Sinotrans Beijing Branch</p></div>
+          <span class="period">2004 — 2007</span>
+        </div>
+        <ul class="xp-body">
+          <li>Maintained a book of 80–100 accounts while developing new clients and hitting branch performance targets.</li>
+          <li>2006 <b>Excellent Account Manager</b> — ranked #1 in Beijing Branch, delivering 79.4% growth vs. a 33% branch average.</li>
+        </ul>
+        <p class="xp-metric"><svg viewBox="0 0 24 24"><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/><circle cx="12" cy="9" r="6"/></svg>2006 · #1 in Beijing Branch · 79.4% YoY growth</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ skills ============ -->
+<section class="block" id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <h2>Skills &amp; Certifications</h2>
+      <p>Regulated qualifications and domain coverage.</p>
+    </div>
+    <div class="sk-grid">
+      <div class="cred reveal">
+        <div class="c-ic"><svg viewBox="0 0 24 24"><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/><circle cx="12" cy="9" r="6"/></svg></div>
+        <h4>Qualification of Fund Practitioner</h4>
+        <p>China Securities Investment Fund Industry Association · 基金从业资格</p>
+      </div>
+      <div class="cred reveal">
+        <div class="c-ic"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+        <h4>National Psychological Counselor · Level 2</h4>
+        <p>国家二级心理咨询师 — professional client communication</p>
+      </div>
+    </div>
+    <div class="chips reveal">
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Primary Market</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Secondary Market</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Fixed Income</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>HK Equities</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>US Equities</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Macroeconomics</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.4-7-11a7 7 0 0 1 14 0c0 5.6-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Asset Allocation</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M3 11l14-6v14L3 13z"/></svg>Roadshow &amp; Training</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Investor Relations</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ contact ============ -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">05</span>
+      <h2>Get in Touch</h2>
+      <p>Let&rsquo;s talk about wealth management, advisory or business development.</p>
+    </div>
+    <div class="contact-card reveal">
+      <a class="c-row" href="tel:+8618501069425">
+        <span class="c-ic"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span>
+        <span><span class="c-lab">Mobile</span><br><span class="c-val">+86 185 0106 9425</span></span>
+      </a>
+      <div class="c-row">
+        <span class="c-ic"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H4l2.2-3.3A8 8 0 1 1 21 12z"/></svg></span>
+        <span><span class="c-lab">WeChat</span><br><span class="c-val">isunrui</span></span>
+      </div>
+      <a class="c-row" href="mailto:42127680@qq.com">
+        <span class="c-ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span><span class="c-lab">Email</span><br><span class="c-val">42127680@qq.com</span></span>
+      </a>
+    </div>
+    <p class="contact-note reveal">Open to opportunities in wealth management, investment advisory and business development.</p>
+  </div>
+</section>
+
+<!-- ============ footer ============ -->
+<footer class="site">
+  <p><b>SUN YUTONG</b> — Wealth Management · Investment Advisory · Roadshow &amp; Training &nbsp;|&nbsp; 2004 — 2026</p>
+</footer>
+
+<!-- ============ mobile drawer ============ -->
+<div class="drawer" id="drawer" role="dialog" aria-label="Sections">
+  <button class="drawer-close" id="drawerClose" aria-label="Close menu"><svg viewBox="0 0 24 24" width="15" height="15" style="stroke:currentColor;fill:none;stroke-width:2;vertical-align:-2px;"><path d="M6 6l12 12M18 6 6 18"/></svg> CLOSE</button>
+  <a href="#about"><span>Career Snapshot</span><i>01</i></a>
+  <a href="#education"><span>Education</span><i>02</i></a>
+  <a href="#experience"><span>Experience</span><i>03</i></a>
+  <a href="#skills"><span>Skills</span><i>04</i></a>
+  <a href="#contact"><span>Contact</span><i>05</i></a>
+</div>
+
+<script>
+(function(){
+'use strict';
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* reveal on scroll */
+var reveals=document.querySelectorAll('.reveal');
+if(reduce||!('IntersectionObserver' in window)){
+  for(var i=0;i<reveals.length;i++)reveals[i].classList.add('in');
+}else{
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  for(var j=0;j<reveals.length;j++)io.observe(reveals[j]);
+}
+
+/* nav scroll-spy */
+var links=document.querySelectorAll('#navLinks a');
+var sections=['about','education','experience','skills','contact'];
+var spyIO=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(!en.isIntersecting)return;
+    var id=en.target.id;
+    for(var i=0;i<links.length;i++)links[i].classList.toggle('on',links[i].dataset.nav===id);
+  });
+},{rootMargin:'-38% 0px -55% 0px'});
+for(var k=0;k<sections.length;k++){
+  var el=document.getElementById(sections[k]);
+  if(el)spyIO.observe(el);
+}
+
+/* mobile drawer */
+var menu=document.getElementById('btnMenu'),drawer=document.getElementById('drawer');
+function closeDrawer(){drawer.classList.remove('open');menu.setAttribute('aria-expanded','false');}
+menu.addEventListener('click',function(){
+  var open=drawer.classList.toggle('open');
+  menu.setAttribute('aria-expanded',open?'true':'false');
+});
+document.getElementById('drawerClose').addEventListener('click',closeDrawer);
+drawer.addEventListener('click',function(e){if(e.target.closest('a'))closeDrawer();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer();});
+})();
+</script>
+</body>
+</html>
